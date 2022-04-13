@@ -51,7 +51,7 @@ def write_rows(rows):
     with open(OUTPUT_PATH, 'w+') as out_file:
         csv_writer = csv.writer(out_file)
 
-        header = ['Year', 'State_code', 'Candidate', 'Votes']
+        header = ['year', 'state_code', 'candidate', 'votes']
         data = rows 
 
         csv_writer.writerow(header)

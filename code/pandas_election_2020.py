@@ -17,5 +17,7 @@ df_votesum = filtered_.groupby(['year', 'state_po', 'candidate'])['candidatevote
 
 sorted_votes = df_votesum.sort_values(['state_po', 'candidatevotes'], ascending = (True, False))
 
+results = sorted_votes.rename(columns={'state_po': 'state_code', 'candidatevotes': 'votes'})
+
 if __name__ == "__main__":
-    sorted_votes.to_csv(OUTPUT_PATH)
+    results.to_csv(OUTPUT_PATH)
